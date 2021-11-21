@@ -101,6 +101,7 @@ function compare(event) {
     } else {
         showQ(qIndex);
     }
+
     questionsEl.appendChild(createDiv);
 
 }
@@ -122,7 +123,7 @@ function end() {
 
     questionsEl.appendChild(createP);
 
-    // Calculates time remaining and replaces it with score
+    // time remaining and replaces it with score
     if (secLeft >= 0) {
         var timeRemaining = secLeft;
         var createP2 = document.createElement("p");
@@ -130,8 +131,8 @@ function end() {
         createP.textContent = "Final Score: " + timeRemaining;
 
         questionsEl.appendChild(createP2);
-    }
-    // Label
+    }    
+    // label
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
@@ -154,7 +155,7 @@ function end() {
 
     questionsEl.appendChild(createSubmit);
 
-    // Event listener to capture initials and local storage for initials and score
+    //  local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
 
@@ -166,6 +167,12 @@ function end() {
             var finalScore = {
                 initials: initials,
                 score: timeRemaining
+            }
+            if (secLeft === 0) {
+                finalScore= {
+                    initials: initials,
+                    score: 0,
+                }
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
