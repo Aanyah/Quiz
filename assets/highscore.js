@@ -23,5 +23,5 @@ if (allScores !== null) {
 }
 //  move to main page
 goBack.addEventListener("click", function () {
-    window.location.replace("./hope.html");
+    window.location.replace("./index.html");
 });
