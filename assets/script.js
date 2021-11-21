@@ -131,6 +131,9 @@ function end() {
         createP.textContent = "Final Score: " + timeRemaining;
 
         questionsEl.appendChild(createP2);
+    }else {
+        secLeft === 0
+        createP.textContent="Final Score:" + secLeft;
     }    
     // label
     var createLabel = document.createElement("label");
