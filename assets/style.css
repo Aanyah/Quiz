@@ -40,6 +40,10 @@ button {
     font-size: 15px;
     border-radius: 10px; 
 }
+button:hover {
+    background-color: navy;
+    color: white;
+}
 /* highscore page  */
 #goBack {
     background-color: var(--primecolor);
@@ -104,4 +108,47 @@ li {
 #createDiv {
     margin-top: 20px;
     border-top: 1px solid lightgray;
+}
+/* Start media queries */
+/* A Media Query max-width: 786px */
+@media screen and (max-width: 786px) {
+    body {
+        max-width: 786px;
+    }
+    
+    #wrapper {
+    position: absolute;
+    left: 20%;
+    }
+    
+    a {
+    margin-left: 20%;
+    }
+    #goBack {
+        
+        position: relative;
+        left: 55%;
+    }
+    
+    #clear {
+        position: relative;
+        right: 5%;  
+    }
+}
+
+/* A Media Query max-width: 640px */
+@media screen and (max-width: 640px) {
+    body {
+        min-width: 640px;
+    }
+    
+    #wrapper {
+    position: absolute;
+    left: 10%;
+    }
+    
+    a {
+      margin-left: 10%;
+    }
+    
 }
